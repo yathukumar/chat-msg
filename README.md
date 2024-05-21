@@ -78,3 +78,14 @@ This class will verify the phone number and OTP , Once the result is success cal
     <data android:scheme="tel" />
     </intent>
     </queries>
+
+## What to add in run App
+
+        WidgetsFlutterBinding.ensureInitialized();
+        await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform,
+        );
+        await SharedPref.init();
+        await IsarDb.init();
+        await DeviceStorage.init();
+        
